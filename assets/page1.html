@@ -81,20 +81,28 @@
             using namespace std;<br />
             class A <br />
             { <br />
+            int a , b , sum ;<br />
             public : <br />
-            void show(){ <br />
-            cout<<"Welcome to ds college";	<br />
+            void get(){ <br />
+            cout<<"Enter your number";	<br />
+            cin>>a>>b; <br />
+            sum = a + b; <br />
             }  <br />
+            void show(){
+            cout<< sum;
+            }
             }; <br />
 
             int main()<br />
             {<br />
             class A obj;<br />
+            obj.get();
             obj.show();<br />
             return 0;<br />
             }<br />
             <br />
-            OUTPUT :
+            OUTPUT :2 4 <br />
+            6
           </div>
         </div>
         <div class="card">
