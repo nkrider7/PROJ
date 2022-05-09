@@ -8,7 +8,9 @@
   <title>project by Narendra Nishad</title>
 </head>
 <body>
-  <h2 style="color:green;" > BASIC PROGRAM OF C AND C++ </h2><br />
+  <h2 style="color:#00ca4e;" > BASIC PROGRAM OF C++ </h2>
+<div class="contbg">
+  
   <div class="card">
     <div class="tools">
       <div class="circle">
@@ -22,11 +24,20 @@
       </div>
     </div>
     <div class="card__content">
-      //  First C++ Program <br /> #include < iostream ><br />int main() <br />{<br />
-        std::cout << "Hello World!";<br />
-        return 0;<br />
-        }<br /><br />
-        OUTPUT : Hello World!
+     <pre>
+// 1.First C++  print Helloworld program 
+
+ #include < iostream >
+ using namespace std;
+ int main() 
+ {
+    cout << "Hello World!";
+
+    return 0;
+ }
+
+    OUTPUT : Hello World!
+     </pre>
       </div>
     </div>
     <div class="card">
@@ -41,26 +52,28 @@
           <span class="green box"></span>
         </div>
       </div>
-      <div class="card__content">
-        // C++ object Program <br />
-        #include < iostream ><br />
-          using namespace std;<br />
-          class A <br />
-          { <br />
-          public : <br />
-          void show(){ <br />
-          cout<<"Welcome to ds college";	<br />
-          }  <br />
-          }; <br />
+      <div class="card__content"><pre>
+// 2. C++ object Program 
 
-          int main()<br />
-          {<br />
-          class A obj;<br />
-          obj.show();<br />
-          return 0;<br />
-          }<br />
-          <br />
+#include < iostream >
+using namespace std;
+
+class A 
+{ 
+   public : 
+   void show(){ 
+   cout<<"Welcome to ds college";	
+  } 
+}; 
+int main()
+ {
+   class A obj;
+   obj.show();
+   return 0;
+  }
+        
           OUTPUT : Welcome to ds college
+        </pre>
         </div>
       </div>
       <div class="card">
@@ -77,33 +90,56 @@
         </div>
         <div class="card__content">
           <!-- this section is contain section  -->
-          // C++ Sum Program <br />
-          #include < iostream ><br />
-            using namespace std;<br />
-            class A <br />
-            { <br />
-            int a , b , sum ;<br />
-            public : <br />
-            void get(){ <br />
-            cout<<"Enter your number";	<br />
-            cin>>a>>b; <br />
-            sum = a + b; <br />
-            }  <br />
-            void show(){
-            cout<< sum;
-            }
-            }; <br />
+          <pre>
+ // 3. C++ Sum Program
 
-            int main()<br />
-            {<br />
-            class A obj;<br />
-            obj.get();
-            obj.show();<br />
-            return 0;<br />
-            }<br />
-            <br />
-            OUTPUT :2 4 <br />
+  #include < iostream >
+  using namespace std;
+  class A 
+  { 
+    int a , b , sum ;
+    public : 
+    void get(){ 
+    cout<<"Enter your number";	
+    cin>>a>>b; 
+    sum = a + b; 
+    }  
+    void show(){
+    cout<< sum;
+    }
+    }; 
+
+ int main()
+  {
+    class A obj;
+    obj.get();
+    obj.show();
+    return 0;
+  }
+            
+            OUTPUT :2 4 
             6
+          </pre>
+          </div>
+        </div>
+       
+        <div class="card">
+          <div class="tools">
+            <div class="circle">
+              <span class="red box"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow box"></span>
+            </div>
+            <div class="circle">
+              <span class="green box"></span>
+            </div>
+          </div>
+          <div class="card__content">
+            <!-- this section is contain section  -->
+           <pre>
+
+           </pre>
           </div>
         </div>
         <div class="card">
@@ -120,25 +156,55 @@
           </div>
           <div class="card__content">
             <!-- this section is contain section  -->
-            // C++ object Program <br />
-          #include < iostream ><br />
-            using namespace std;<br />
-            class A <br />
-            { <br />
-            public : <br />
-            void show(){ <br />
-            cout<<"Welcome to ds college";	<br />
-            }  <br />
-            }; <br />
+            <pre>
+//  5. c++ simple calculater 
+# include < iostream >
+using namespace std;
 
-            int main()<br />
-            {<br />
-            class A obj;<br />
-            obj.show();<br />
-            return 0;<br />
-            }<br />
-            <br />
-            OUTPUT :
+int main() {
+
+  char op;
+  float num1, num2;
+
+  cout << "Enter operator: +, -, *, /: ";
+  cin >> op;
+
+  cout << "Enter two operands: ";
+  cin >> num1 >> num2;
+
+  switch(op) {
+
+    case '+':
+      cout << num1 << " + " << num2 << " = " << num1 + num2;
+      break;
+
+    case '-':
+      cout << num1 << " - " << num2 << " = " << num1 - num2;
+      break;
+
+    case '*':
+      cout << num1 << " * " << num2 << " = " << num1 * num2;
+      break;
+
+    case '/':
+      cout << num1 << " / " << num2 << " = " << num1 / num2;
+      break;
+
+    default:
+      // If the operator is other than +, -, * or /, error message is shown
+      cout << "Error! operator is not correct";
+      break;
+  }
+
+  return 0;
+}
+
+    OUTPUT : Enter operator: +, -, *, /: +
+             20 30
+             20 + 30 =50
+
+            </pre>
+           
           </div>
         </div>
         <div class="card">
@@ -155,25 +221,9 @@
           </div>
           <div class="card__content">
             <!-- this section is contain section  -->
-            // C++ object Program <br />
-          #include < iostream ><br />
-            using namespace std;<br />
-            class A <br />
-            { <br />
-            public : <br />
-            void show(){ <br />
-            cout<<"Welcome to ds college";	<br />
-            }  <br />
-            }; <br />
+          <pre>
 
-            int main()<br />
-            {<br />
-            class A obj;<br />
-            obj.show();<br />
-            return 0;<br />
-            }<br />
-            <br />
-            OUTPUT :
+          </pre>
           </div>
         </div>
         <div class="card">
@@ -190,25 +240,7 @@
           </div>
           <div class="card__content">
             <!-- this section is contain section  -->
-            // C++ object Program <br />
-          #include < iostream ><br />
-            using namespace std;<br />
-            class A <br />
-            { <br />
-            public : <br />
-            void show(){ <br />
-            cout<<"Welcome to ds college";	<br />
-            }  <br />
-            }; <br />
-
-            int main()<br />
-            {<br />
-            class A obj;<br />
-            obj.show();<br />
-            return 0;<br />
-            }<br />
-            <br />
-            OUTPUT :
+            
           </div>
         </div>
         <div class="card">
@@ -225,25 +257,7 @@
           </div>
           <div class="card__content">
             <!-- this section is contain section  -->
-            // C++ object Program <br />
-          #include < iostream ><br />
-            using namespace std;<br />
-            class A <br />
-            { <br />
-            public : <br />
-            void show(){ <br />
-            cout<<"Welcome to ds college";	<br />
-            }  <br />
-            }; <br />
-
-            int main()<br />
-            {<br />
-            class A obj;<br />
-            obj.show();<br />
-            return 0;<br />
-            }<br />
-            <br />
-            OUTPUT :
+           
           </div>
         </div>
         <div class="card">
@@ -260,25 +274,7 @@
           </div>
           <div class="card__content">
             <!-- this section is contain section  -->
-            // C++ object Program <br />
-          #include < iostream ><br />
-            using namespace std;<br />
-            class A <br />
-            { <br />
-            public : <br />
-            void show(){ <br />
-            cout<<"Welcome to ds college";	<br />
-            }  <br />
-            }; <br />
-
-            int main()<br />
-            {<br />
-            class A obj;<br />
-            obj.show();<br />
-            return 0;<br />
-            }<br />
-            <br />
-            OUTPUT :
+           
           </div>
         </div>
         <div class="card">
@@ -295,25 +291,7 @@
           </div>
           <div class="card__content">
             <!-- this section is contain section  -->
-            // C++ object Program <br />
-          #include < iostream ><br />
-            using namespace std;<br />
-            class A <br />
-            { <br />
-            public : <br />
-            void show(){ <br />
-            cout<<"Welcome to ds college";	<br />
-            }  <br />
-            }; <br />
-
-            int main()<br />
-            {<br />
-            class A obj;<br />
-            obj.show();<br />
-            return 0;<br />
-            }<br />
-            <br />
-            OUTPUT :
+           
           </div>
         </div>
         <div class="card">
@@ -330,25 +308,7 @@
           </div>
           <div class="card__content">
             <!-- this section is contain section  -->
-            // C++ object Program <br />
-          #include < iostream ><br />
-            using namespace std;<br />
-            class A <br />
-            { <br />
-            public : <br />
-            void show(){ <br />
-            cout<<"Welcome to ds college";	<br />
-            }  <br />
-            }; <br />
-
-            int main()<br />
-            {<br />
-            class A obj;<br />
-            obj.show();<br />
-            return 0;<br />
-            }<br />
-            <br />
-            OUTPUT :
+           
           </div>
         </div>
         <div class="card">
@@ -365,25 +325,7 @@
           </div>
           <div class="card__content">
             <!-- this section is contain section  -->
-            // C++ object Program <br />
-          #include < iostream ><br />
-            using namespace std;<br />
-            class A <br />
-            { <br />
-            public : <br />
-            void show(){ <br />
-            cout<<"Welcome to ds college";	<br />
-            }  <br />
-            }; <br />
-
-            int main()<br />
-            {<br />
-            class A obj;<br />
-            obj.show();<br />
-            return 0;<br />
-            }<br />
-            <br />
-            OUTPUT :
+            
           </div>
         </div>
         <div class="card">
@@ -400,25 +342,7 @@
           </div>
           <div class="card__content">
             <!-- this section is contain section  -->
-            // C++ object Program <br />
-          #include < iostream ><br />
-            using namespace std;<br />
-            class A <br />
-            { <br />
-            public : <br />
-            void show(){ <br />
-            cout<<"Welcome to ds college";	<br />
-            }  <br />
-            }; <br />
-
-            int main()<br />
-            {<br />
-            class A obj;<br />
-            obj.show();<br />
-            return 0;<br />
-            }<br />
-            <br />
-            OUTPUT :
+           
           </div>
         </div>
         <div class="card">
@@ -435,25 +359,7 @@
           </div>
           <div class="card__content">
             <!-- this section is contain section  -->
-            // C++ object Program <br />
-          #include < iostream ><br />
-            using namespace std;<br />
-            class A <br />
-            { <br />
-            public : <br />
-            void show(){ <br />
-            cout<<"Welcome to ds college";	<br />
-            }  <br />
-            }; <br />
-
-            int main()<br />
-            {<br />
-            class A obj;<br />
-            obj.show();<br />
-            return 0;<br />
-            }<br />
-            <br />
-            OUTPUT :
+            
           </div>
         </div>
         <div class="card">
@@ -470,62 +376,13 @@
           </div>
           <div class="card__content">
             <!-- this section is contain section  -->
-            // C++ object Program <br />
-          #include < iostream ><br />
-            using namespace std;<br />
-            class A <br />
-            { <br />
-            public : <br />
-            void show(){ <br />
-            cout<<"Welcome to ds college";	<br />
-            }  <br />
-            }; <br />
-
-            int main()<br />
-            {<br />
-            class A obj;<br />
-            obj.show();<br />
-            return 0;<br />
-            }<br />
-            <br />
-            OUTPUT :
+            
           </div>
         </div>
-        <div class="card">
-          <div class="tools">
-            <div class="circle">
-              <span class="red box"></span>
-            </div>
-            <div class="circle">
-              <span class="yellow box"></span>
-            </div>
-            <div class="circle">
-              <span class="green box"></span>
-            </div>
-          </div>
-          <div class="card__content">
-            <!-- this section is contain section  -->
-            // C++ object Program <br />
-          #include < iostream ><br />
-            using namespace std;<br />
-            class A <br />
-            { <br />
-            public : <br />
-            void show(){ <br />
-            cout<<"Welcome to ds college";	<br />
-            }  <br />
-            }; <br />
-
-            int main()<br />
-            {<br />
-            class A obj;<br />
-            obj.show();<br />
-            return 0;<br />
-            }<br />
-            <br />
-            OUTPUT :
-          </div>
-        </div>
+      </div>
+      
+      <a href="page2.html" class="next">Next &raquo;</a>
+      
         
       </body>
     </html>
