@@ -113,6 +113,121 @@ int main()
         </div>
       </div>
       <div class="card__content"><pre>
+// class  is a user define datatype  which is declared by keyword class .class contain its own data member and member funbtion . 
+// These data member and member function accessed by three specifier ( private , protected , public )
+// CLASS TYPE { LOCAL CLASS , GLOBAL CLASS , FRIEND CLASS , TEMPLETE CLASS , ABSTRACT CLASS , STATIC CLASS }
+
+//  LOCAL CLASS => A class which is declared inside a function or block is called local class .
+// Local class program 
+
+#include < iostream >
+  using namespace std;
+  void function()
+  { 
+  	class A 
+	{
+		private:
+		int a ,b;
+		public:
+		void show()
+		{
+			cout<<"ENTER TWO VALUE :";
+			cin>>a>>b;
+			cout<<a<<" "<<b;
+			
+	
+	};
+	A obj;
+	obj.show();
+int main(){
+	function();
+return 0;
+}
+OUTPUT:
+2
+6
+2 6
+
+// GLOBAL =>> A Class which declared outside of all the function or block is called  global class .
+// Global class program 
+
+ #include < iostream >
+  using namespace std;
+  class A 
+  {
+	int a,b;
+	public:
+	void input()
+	{
+		cout<<"Enter two value : ";
+		cin>>a>>b;
+	}
+	void show()
+	{
+		cout<<a<<" "<<b;
+	}
+};
+int main(){
+	A obj();
+	obj.input();
+	obj.show();
+	
+	return 0;
+}
+
+
+OUTPUT :
+Enter two vlaue :
+2
+3
+2 3
+// ACCESS MODIFIERS => Access modifiers are used to implement an important aspect of Object-Oriented Programming known as Data Hiding. 
+// Public 
+// Private 
+// Protected
+
+// These 3 keywords (public, protected, and private) are known as access specifiers in C++ inheritance.
+// C++ program to demonstrate the working of public inheritance
+
+#include <iostream>
+using namespace std;
+
+class Base {
+  private:
+    int pvt = 1;
+
+  protected:
+    int prot = 2;
+
+  public:
+    int pub = 3;
+
+    // function to access private member
+    int getPVT() {
+      return pvt;
+    }
+};
+
+class PublicDerived : public Base {
+  public:
+    // function to access protected member from Base
+    int getProt() {
+      return prot;
+    }
+};
+
+int main() {
+  PublicDerived object1;
+  cout << "Private = " << object1.getPVT() << endl;
+  cout << "Protected = " << object1.getProt() << endl;
+  cout << "Public = " << object1.pub << endl;
+  return 0;
+}
+	
+
+
+
+	
 
         </pre>
         </div>
