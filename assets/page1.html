@@ -8,7 +8,7 @@
   <title>project by Narendra Nishad</title>
 </head>
 <body>
-  <center><h2 style="color:#00ca4e;background-color:#ffbd44;border-radius:4px;" > PROGRAM OF C++  </h2></center>
+  <center><h2 style="color:#00ca4e;background-color:#ff0000;border-radius:4px;" > PROGRAM OF C++  </h2></center>
 <div class="contbg">
   <center><h4 style="color:#00ca4e;border-radius:4px;" > 1. BASIC PROGRAM OF C++  </h2></center>
   
@@ -24,6 +24,7 @@
         <span class="green box"></span>
       </div>
     </div>
+    <center><h6 style="color:#00ca4e;border-radius:4px;" >HELLOWORLD PROGRAM</h6></center>
     <div class="card__content">
      <pre>
 // 1.First C++  print Helloworld program 
@@ -40,6 +41,7 @@
     OUTPUT : Hello World!
     
     
+<center><h6 style="color:#00ca4e;border-radius:4px;" > OBJECT PROGRAM</h2></center> 
     
     
 // 2. C++ object Program 
@@ -64,6 +66,7 @@ int main()
           OUTPUT : Welcome to ds college  
           
           
+  <center><h6 style="color:#00ca4e;border-radius:4px;" > SUM TWO NUMBER OBJECT PROGRAM</h2></center> 
           
 // 3. C++ Sum Program
 
@@ -73,33 +76,120 @@ int main()
   { 
     int a , b , sum ;
     public : 
-    void get(){ 
-    cout<<"Enter your number";	
+    void set(){ 
     cin>>a>>b; 
-    sum = a + b; 
     }  
     void show(){
-    cout<< sum;
+    cout<< a+b;
     }
     }; 
 
  int main()
   {
     class A obj;
+    obj.set();
     obj.get();
-    obj.show();
     return 0;
   }
             
             OUTPUT :2 4 
             6    
             
+  <center><h6 style="color:#00ca4e;border-radius:4px;" >DIFFERANCE OF TWO NUMBER OBJECT PROGRAM</h2></center>        
             
+ // 4. differance between two number
+#include < iostream >
+using namespace std ;
+class A
+{
+	public :
+	int a , b  ;
+	void set(){
+		cin>>a>>b;
+	}
+	void get(){
+		cout<< a-b;
+	}
+};
+int main()
+{
+	A obj;
+	obj.set();
+	obj.get();
+	
+	return 0;
+}
+	
+	
+	
+	 OUTPUT :
+	 6 4
+	 2
+	<center><h6 style="color:#00ca4e;border-radius:4px;" >PRODUCT OF TWO NUMBER  OBJECT PROGRAM</h2></center> 
+// 5. Product' two number
+#include < iostream >
+using namespace std ;
+class A
+{
+	public :
+	int a , b  ;
+	void set(){
+		cin>>a>>b;
+	}
+	void get(){
+		cout<< a*b;
+	}
+};
+int main()
+{
+	A obj;
+	obj.set();
+	obj.get();
+	
+	return 0;
+}	 
+	
+OUTPUT: 3 4
+12
+<center><h6 style="color:#00ca4e;border-radius:4px;" >QUOTIENT OF TWO NUMBER  OBJECT PROGRAM</h2></center> 
+// 6. Quotient  and remainder program
+#include < iostream >
+using namespace std ;
+class A
+{
+	public :
+	int a , b  ;
+	void set(){
+		cin>>a>>b;
+	}
+	void get(){
+		
+		cout<<"Quotient = "<< a/b << endl;
+		cout<< "Remainder = " << a%b;
+	}
+};
+int main()
+{
+	A obj;
+	obj.set();
+	obj.get();
+	
+	return 0;
+}
+
+OUTPUT: 
+15
+6
+Quotient = 2
+Remainder = 3
+
+	
+	 
              
      </pre>
       </div>
     </div>
-    <center><h4 style="color:#00ca4e;border-radius:4px;" > 2. FORMULA PROGRAM OF C++  </h2></center>
+    <center><h4 style="color:#00ca4e;border-radius:4px;" > 2.CLASS TYPE PROGRAM OF C++  </h2></center>
     <div class="card">
       <div class="tools">
         <div class="circle">
@@ -133,7 +223,7 @@ int main()
 		{
 			cout<<"ENTER TWO VALUE :";
 			cin>>a>>b;
-			cout<<a<<" "<<b;
+			cout<< a <<" "<< b;
 			
 	
 	};
@@ -164,7 +254,7 @@ OUTPUT:
 	}
 	void show()
 	{
-		cout<<a<<" "<<b;
+		cout<< a<<" "<< b;
 	}
 };
 int main(){
@@ -189,7 +279,7 @@ Enter two vlaue :
 // These 3 keywords (public, protected, and private) are known as access specifiers in C++ inheritance.
 // C++ program to demonstrate the working of public inheritance
 
-#include <iostream>
+#include < iostream >
 using namespace std;
 
 class Base {
@@ -252,7 +342,7 @@ int main() {
           </pre>
           </div>
         </div>
-    <center><h4 style="color:#00ca4e;border-radius:4px;" > 4. BASIC PROGRAM OF C++  </h2></center>
+    <center><h4 style="color:#00ca4e;border-radius:4px;" > 4. PRINT TRIANGLE STAR PROGRAM </h2></center>
         <div class="card">
           <div class="tools">
             <div class="circle">
@@ -286,9 +376,26 @@ int main()
 	}
 	return 0;
 }
+
+OUTPUT :
+
+Enter the number
+9
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+[Program finished]
            </pre>
           </div>
         </div>
+  <center><h4 style="color:#00ca4e;border-radius:4px;" > 5.CALCULATER PROGRAM IN C++  </h2></center>
         <div class="card">
           <div class="tools">
             <div class="circle">
@@ -304,7 +411,7 @@ int main()
           <div class="card__content">
             <!-- this section is contain section  -->
             <pre>
-//  5. c++ simple calculater 
+// c++  calculater program
 # include < iostream >
 using namespace std;
 
@@ -354,6 +461,7 @@ int main() {
            
           </div>
         </div>
+<center><h4 style="color:#00ca4e;border-radius:4px;" > 6.UNIVERSAL NUMBER TABLE PROGRAM </h2></center>        
         <div class="card">
           <div class="tools">
             <div class="circle">
@@ -369,10 +477,164 @@ int main() {
           <div class="card__content">
             <!-- this section is contain section  -->
           <pre>
+// Table print program
+#include < iostream >
+using namespace std;
+
+int main(){
+	// all number table printer 
+	cout<<"Enter the number of table : ";
+	int n;
+	cin>>n;
+	int t=10;
+	for(int i=1;t>=i;i++){
+		cout<< n <<" x "<< i <<" = "<< n*i<< endl;
+	}
+	return 0;
+	// 13 min make ths program
+}
+
+OUTPUT : 
+Enter the number of table : 9
+9 x 1 = 9
+9 x 2 = 18
+9 x 3 = 27
+9 x 4 = 36
+9 x 5 = 45
+9 x 6 = 54
+9 x 7 = 63
+9 x 8 = 72
+9 x 9 = 81
+9 x 10 = 90
 
           </pre>
           </div>
         </div>
+  <center><h4 style="color:#00ca4e;border-radius:4px;" > 7. PRINT RECTANGLE  PROGRAM OF C++  </h2></center>       
+        <div class="card">
+          <div class="tools">
+            <div class="circle">
+              <span class="red box"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow box"></span>
+            </div>
+            <div class="circle">
+              <span class="green box"></span>
+            </div>
+          </div>
+          <div class="card__content">
+            <!-- this section is contain section  -->
+            <pre>
+#include < iostream >
+using namespace std;
+// print rectangle program 
+
+int main()
+{
+	int col,row;
+	cout << "Enter the number " << endl;
+	cin>>col>>row;
+	for (int i=0;i<=row;i++){
+	    for (int i=0;i<=col;i++){
+	        cout<<"*";
+	        
+	    }
+	    cout<< endl;
+	}
+	
+	return 0;
+}
+
+OUTPUT:
+
+Enter the number
+8
+4
+*********
+*********
+*********
+*********
+*********
+
+[Program finished]
+            </pre>
+          </div>
+        </div>
+        
+<center><h4 style="color:#00ca4e;border-radius:4px;" > 8. BASIC PROGRAM OF C++  </h2></center>
+        <div class="card">
+          <div class="tools">
+            <div class="circle">
+              <span class="red box"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow box"></span>
+            </div>
+            <div class="circle">
+              <span class="green box"></span>
+            </div>
+          </div>
+          <div class="card__content">
+            <!-- this section is contain section  -->
+           
+          </div>
+        </div>
+  <center><h4 style="color:#00ca4e;border-radius:4px;" > 9. BASIC PROGRAM OF C++  </h2></center>
+        <div class="card">
+          <div class="tools">
+            <div class="circle">
+              <span class="red box"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow box"></span>
+            </div>
+            <div class="circle">
+              <span class="green box"></span>
+            </div>
+          </div>
+          <div class="card__content">
+            <!-- this section is contain section  -->
+           
+          </div>
+        </div>
+  <center><h4 style="color:#00ca4e;border-radius:4px;" > 10. BASIC PROGRAM OF C++  </h2></center>
+        <div class="card">
+          <div class="tools">
+            <div class="circle">
+              <span class="red box"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow box"></span>
+            </div>
+            <div class="circle">
+              <span class="green box"></span>
+            </div>
+          </div>
+          <div class="card__content">
+            <!-- this section is contain section  -->
+           
+          </div>
+        </div>
+  <center><h4 style="color:#00ca4e;border-radius:4px;" > 11. BASIC PROGRAM OF C++  </h2></center>
+        <div class="card">
+          <div class="tools">
+            <div class="circle">
+              <span class="red box"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow box"></span>
+            </div>
+            <div class="circle">
+              <span class="green box"></span>
+            </div>
+          </div>
+          <div class="card__content">
+            <!-- this section is contain section  -->
+           
+          </div>
+        </div>
+  <center><h4 style="color:#00ca4e;border-radius:4px;" > 12. BASIC PROGRAM OF C++  </h2></center>
         <div class="card">
           <div class="tools">
             <div class="circle">
@@ -390,6 +652,7 @@ int main() {
             
           </div>
         </div>
+  <center><h4 style="color:#00ca4e;border-radius:4px;" > 13. BASIC PROGRAM OF C++  </h2></center>
         <div class="card">
           <div class="tools">
             <div class="circle">
@@ -407,57 +670,7 @@ int main() {
            
           </div>
         </div>
-        <div class="card">
-          <div class="tools">
-            <div class="circle">
-              <span class="red box"></span>
-            </div>
-            <div class="circle">
-              <span class="yellow box"></span>
-            </div>
-            <div class="circle">
-              <span class="green box"></span>
-            </div>
-          </div>
-          <div class="card__content">
-            <!-- this section is contain section  -->
-           
-          </div>
-        </div>
-        <div class="card">
-          <div class="tools">
-            <div class="circle">
-              <span class="red box"></span>
-            </div>
-            <div class="circle">
-              <span class="yellow box"></span>
-            </div>
-            <div class="circle">
-              <span class="green box"></span>
-            </div>
-          </div>
-          <div class="card__content">
-            <!-- this section is contain section  -->
-           
-          </div>
-        </div>
-        <div class="card">
-          <div class="tools">
-            <div class="circle">
-              <span class="red box"></span>
-            </div>
-            <div class="circle">
-              <span class="yellow box"></span>
-            </div>
-            <div class="circle">
-              <span class="green box"></span>
-            </div>
-          </div>
-          <div class="card__content">
-            <!-- this section is contain section  -->
-           
-          </div>
-        </div>
+  <center><h4 style="color:#00ca4e;border-radius:4px;" > 14. BASIC PROGRAM OF C++  </h2></center>
         <div class="card">
           <div class="tools">
             <div class="circle">
@@ -475,6 +688,7 @@ int main() {
             
           </div>
         </div>
+  <center><h4 style="color:#00ca4e;border-radius:4px;" > 15.DSA stack program   </h2></center>
         <div class="card">
           <div class="tools">
             <div class="circle">
@@ -489,41 +703,124 @@ int main() {
           </div>
           <div class="card__content">
             <!-- this section is contain section  -->
-           
-          </div>
-        </div>
-        <div class="card">
-          <div class="tools">
-            <div class="circle">
-              <span class="red box"></span>
-            </div>
-            <div class="circle">
-              <span class="yellow box"></span>
-            </div>
-            <div class="circle">
-              <span class="green box"></span>
-            </div>
-          </div>
-          <div class="card__content">
-            <!-- this section is contain section  -->
-            
-          </div>
-        </div>
-        <div class="card">
-          <div class="tools">
-            <div class="circle">
-              <span class="red box"></span>
-            </div>
-            <div class="circle">
-              <span class="yellow box"></span>
-            </div>
-            <div class="circle">
-              <span class="green box"></span>
-            </div>
-          </div>
-          <div class="card__content">
-            <!-- this section is contain section  -->
-            
+            <pre>
+/* Data structure algorithem stack program stack operation push pop peak*/
+#include < iostream >
+#include< conio.h >
+
+using namespace std;
+int stack[10],top=-1;
+void push();
+void pop();
+void show();
+void exit();
+
+int main()
+{
+	int ch;
+	clrscr();
+	cout<<"1.PUSH(ADD  MEMBAR )\n";
+	cout<<"2.POP(DELETE MEMBAR)\n";
+	cout<<"3.SHOW (SHOW  LIST )\n";
+	cout<<"4.Exit";
+	while (1)
+	{
+	    cout<<"\nEnter your chioic : \n";
+	    cin>>ch;
+	    switch(ch)
+	    {
+	        case 1: push();
+	        break;
+	        case 2: pop();
+	        break;
+	        case 3: show();
+	        break;
+	        case 4: exit();
+	        break;
+	        default:printf("invalid chocic option");
+	    }
+	}	return 0;
+}
+void push()
+{
+    int item;
+    if (top==5-1)
+    {
+        cout<<"stack is full";
+    }
+    else 
+    {
+        cout<<"push (add) the element :";
+        cin>>item;
+        top=top+1;
+        stack[top]=item;
+    }
+}
+void pop()
+{
+    if(top==-1)
+    {
+        cout<<"stack is empty";
+    }
+    else 
+    {
+        cout<<"pop is "<< stack[top];
+        top=top-1;
+    }
+}
+void show()
+{
+    int i ;
+    if(top>=0)
+    {
+        cout<<"Your store element:-\n";
+        for (i=top;i>=0;i--)
+        {
+            cout<<"=>"<< stack[i]<< endl;
+        }
+    }
+    else 
+    {
+        cout<<"stack is empty";
+    }
+}
+void exit()
+{
+    cout<<"ok  exit the program";
+    
+}
+
+
+OUTPUT: 
+
+1.PUSH(ADD  MEMBAR )
+2.POP(DELETE MEMBAR)
+3.SHOW (SHOW  LIST )
+4.Exit
+Enter your chioic :
+1
+push (add) the element :20
+
+Enter your chioic :
+1
+push (add) the element :40
+
+Enter your chioic :
+1
+push (add) the element :30
+
+Enter your chioic :
+3
+Your store element:-
+=>30
+=>40
+=>20
+
+Enter your chioic :
+2
+pop is 30
+Enter your chioic :
+            </pre>
           </div>
         </div>
       </div>
