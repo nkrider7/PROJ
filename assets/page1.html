@@ -322,7 +322,7 @@ int main() {
         </pre>
         </div>
       </div>
-      <center><h4 style="color:#00ca4e;border-radius:4px;" > 3. BASIC PROGRAM OF C++  </h2></center>
+      <center><h4 style="color:#00ca4e;border-radius:4px;" > 3. INHERITANCE IN C++ OOP  </h2></center>
       <div class="card">
         <div class="tools">
           <div class="circle">
@@ -338,7 +338,135 @@ int main() {
         <div class="card__content">
           <!-- this section is contain section  -->
           <pre>
+ <center><h1 style="color:#00ccff;border-radius:4px;" >INHERITANCE</h2></center>
+    <center><h4 style="color:#00ca4e;border-radius:4px;" > Advantage of C++ inheritance . </h2></center>
+    Now you can reuse the member of your parent class. so there is no need to define the member again so less code is required in the class .
+    <h4 style="color:#ffb500;border-radius:4px;" >SINGLE INHERITANCE</h2>
+    <h4 style="color:#ffb500;border-radius:4px;" >MULTILEVEL INHERITANCE</h2>
+    <h4 style="color:#ffb500;border-radius:4px;" >MULTIPLE INHERITANCE</h2>
+    <h4 style="color:#ffb500;border-radius:4px;" >HIERARCHICAL INHERITANCE</h2></center>
+    <h4 style="color:#ffb500;border-radius:4px;" >HYBRID INHERITANCE</h2>
+  
+  SINGLE INHERITANCE EXAMPLE :
+  
+#include < iostream >
+using namespace std;
+class A 
+{
+  	public :
+  	int a= 27 ;	
+};
+class B :public A
+{
+	public:
+	void show(){
+		cout<< a;
+	}	
+};
+int main(){
 
+	B obj;
+	obj.show();		
+	return 0;
+	
+}
+  
+OUTPUT :
+27
+
+MULTILEVEL INHERITANCE EXAMPLE :
+
+
+#include < iostream >
+using namespace std ;
+class A
+{
+	public:
+	void a(){
+		cout<<"class a ";
+	}
+	
+};
+class B:public A
+{
+	public:
+	void b(){
+		cout<<"class b ";
+	}
+};
+class C:public B
+{
+	public:
+	void c(){
+		cout<<"class c";
+	}
+};
+
+int main(){
+	cout<<"multilevel inharitance \n";
+	C obj;
+	obj.a();
+	obj.b();
+	obj.c();
+	
+	return 0;
+	
+}
+OUTPUT :
+
+multilevel inharitance
+
+class a class b class c
+
+[Program finished]
+
+
+MULTIPLE INHERITANCE EXAMPLE :
+
+#include < iostream >
+using namespace std ;
+class A
+{
+	public:
+	void a(){
+		cout<<"class a ";
+	}
+	
+};
+class B
+{
+	public:
+	void b(){
+		cout<<"class b ";
+	}
+};
+class C:public A , public B
+{
+	public:
+	void c(){
+		cout<<"class c";
+	}
+};
+
+int main(){
+	cout<<"multiple inharitance \n";
+	C obj;
+	obj.a();
+	obj.b();
+	obj.c();
+	
+	return 0;
+	
+}
+
+OUTPUT : 
+multiple inharitance
+
+class a class b class c
+
+[Program finished]
+  
+    
           </pre>
           </div>
         </div>
