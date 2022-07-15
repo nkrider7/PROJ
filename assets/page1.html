@@ -690,7 +690,7 @@ Enter the number
           </div>
         </div>
         
-<center><h4 style="color:#00ca4e;border-radius:4px;" > 8. BASIC PROGRAM OF C++  </h2></center>
+<center><h4 style="color:#00ca4e;border-radius:4px;" > 8.Recursion program  OF C++  </h2></center>
         <div class="card">
           <div class="tools">
             <div class="circle">
@@ -705,7 +705,160 @@ Enter the number
           </div>
           <div class="card__content">
             <!-- this section is contain section  -->
-           
+             <pre>
+               <center><h6 style="color:#00ca4e;border-radius:4px;" >FACTORIAL USING RECURSION  PROGRAM</h2></center> 
+  #include < iostream >
+using namespace std ;
+int fact(int x){
+	if (x==1){
+		return (x);
+	}
+	else{
+		return (x *fact(x-1)  );
+	}
+}
+int main(){
+	int n ,result;
+    cout<<"Enter the number : ";
+    cin>>n;
+    result=fact(n);
+    cout<<"The factorial of "<< n <<" is "<< result;
+    
+	return 0;
+	
+}        
+
+OUTPUT :
+Enter the number : 5
+The factorial of 5 is 120
+[Program finished]
+
+
+<center><h6 style="color:#00ca4e;border-radius:4px;" >FIBONICCE SERIS RECURSION PROGRAM</h2></center> 
+
+#include < iostream >
+using namespace std ;
+
+int fibnum(int p){
+	if (p == 1 || p == 0)
+	{
+		return (p);
+	}
+	else {
+		return (fibnum(p-1)+ fibnum(p-2));
+}
+}
+int main()
+{
+	int p ,num;
+	cout<<"Enter the position of element you want from fibonic series : ";
+	cin>>p;
+	num = fibnum(p);
+	cout<<"The required fibonic number :"<< num;
+		
+	return 0;
+	
+}
+
+OUTPUT:
+
+Enter the position of element you want from fibonic series : 3
+The required fibonic number :2
+
+
+[Program finished]
+
+
+<center><h6 style="color:#00ca4e;border-radius:4px;" >FACTORIAL USING BASE CONDITION PROGRAM</h2></center> 
+
+
+
+#include < iostream >
+using namespace std ;
+ long int multiple(int n){
+	
+	if (n>=1){
+		return n* multiple(n-1);
+	}
+	else {
+		return 1;
+	}	
+}
+int main(){
+		int n;
+		cout<<"Enter your positive integer : ";
+		cin>>n;
+		cout<<" Factorial at "<< n<<" is"<< multiple(n);
+		
+		
+	return 0;
+	
+}
+
+OUTPUT:
+Enter your positive integer : 5
+ Factorial at 5 is  120
+[Program finished]
+
+
+<center><h6 style="color:#00ca4e;border-radius:4px;" >FIBONAICC SERIES WITH LIMIT PROGRAM</h2></center> 
+
+
+#include <  iostream >
+using namespace std ;
+// fibonaicc series limit number 
+void fseries(int p){
+	int fib;
+	static int f0=1,f1=1;
+	if (p==0)
+	{
+		cout<<"\nThe series of end here ";
+	}
+	else {
+		fib = f0 +f1 ;
+		f0 = f1;
+		f1 =fib;
+		cout<<"\n"<< fib;
+		fseries(p-1);
+	}
+}
+
+int main(){
+   int limit , f0=1 , f1=1;
+   cout<<"Enter the limit of fibonaicc series :";
+   cin>>limit;
+   if (limit > 2)
+   {
+   		cout<< f0<<"\n"<< f1;
+   		fseries(limit -2);
+   }
+   else if (limit == 2 )
+   {
+   		cout<< f0<<"\n"<< f1;
+   }
+   else if (limit == 1)
+   {
+   		cout<< f1;
+   }
+   else {
+   		cout<<"series not possible ";
+   }
+   		
+	return 0;
+	
+}
+
+OUTPUT:
+
+Enter the limit of fibonaicc series :3
+1
+1
+2
+The series of end here
+[Program finished]
+
+
+             </pre>
           </div>
         </div>
   <center><h4 style="color:#00ca4e;border-radius:4px;" > 9. BASIC PROGRAM OF C++  </h2></center>
