@@ -8,7 +8,7 @@ body {
     background-image: linear-gradient(144deg,#8608b4, #492fed 60%,#bd6fda);
     border: none;
     position: relative;
-    
+    margin-top: 200px;
     margin: auto;
     font-family: inherit;
     border-radius: 20px;
