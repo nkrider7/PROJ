@@ -10,7 +10,6 @@
 <body>
 <center><h2 style="color:#00ca4e;" >  DATA STRUCTURE AND ALGORITHM </h2></center>
 <div class="contbg">
-  
   <div class="card">
     <div class="tools">
       <div class="circle">
@@ -24,7 +23,44 @@
       </div>
     </div>
     <div class="card__content">
-     <pre>s
+      <center><h6 style="color:#00ca4e;border-radius:4px;" > INSERTION IN ARRAY </h2></center> 
+     <pre>
+       
+#include < iostream >
+using namespace std ;
+
+int main(){
+	int n ;
+	cout<<"Enter the size of array [ ] :";
+	cin>>n;
+	int arr[n];
+	for (int i =0 ;i < n ;i++){
+		cout<<"enter the element :";
+		cin>>arr[i];
+	}
+	for(int i =0 ; i < n ;i++)
+	{
+	   cout<<"Your "<< i<<" is "<< arr[i]<< endl;
+	}
+	return 0;
+	
+}
+
+Output : 
+Enter the size of array [ ] :4
+enter the element :10
+enter the element :20
+enter the element :30
+enter the element :40
+Your 0 is 10
+Your 1 is 20
+Your 2 is 30
+Your 3 is 40
+
+[Program finished]
+
+
+       
      </pre>
       </div>
     </div>
@@ -40,8 +76,38 @@
           <span class="green box"></span>
         </div>
       </div>
-      <div class="card__content"><pre>
+      <div class="card__content">
+        <center><h6 style="color:#00ca4e;border-radius:4px;" > DELETION IN ARRAY </h2></center>
+        <pre>
+#include < iostream >
+using namespace std;
 
+int deleteElementsInRange(int arr[], int n, int l, int r)
+{
+	int i, newIndex = 0;
+	for (i = 0; i < n; i++)
+	{
+		if (i <= l || i >= r)
+		{
+			arr[newIndex] = arr[i];
+			newIndex++;
+		}
+	}
+	return newIndex;
+}
+int main()
+{
+	int n = 9, l = 1, r = 6;
+	int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+	int updatedArrayLength = deleteElementsInRange(arr, n, l, r);
+	for (int i = 0; i < updatedArrayLength; i++)
+	{
+		cout << arr[i] << " ";
+	}
+	cout << endl;
+	return 0;
+	
+}
         </pre>
         </div>
       </div>
@@ -58,8 +124,32 @@
           </div>
         </div>
         <div class="card__content">
+          <center><h6 style="color:#00ca4e;border-radius:4px;" > PRINT ALL ELEMENT IN ARRAY </h2></center>
           <!-- this section is contain section  -->
           <pre>
+  #include < iostream >
+using namespace std ;
+
+int main(){
+	
+	int arr[5]= {10,20,30,40};
+	for(int i =0 ; i < 4 ;i++)
+	{
+	   cout<<"Your  "<< i<<" place is "<< arr[i]<< endl;
+	}
+	return 0;
+	
+}          
+
+Output :
+
+Your  0 place is 10
+Your  1 place is 20
+Your  2 place is 30
+Your  3 place is 40
+
+[Program finished]
+            
           </pre>
           </div>
         </div>
