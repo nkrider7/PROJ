@@ -168,8 +168,51 @@ Your  3 place is 40
           </div>
           <div class="card__content">
             <!-- this section is contain section  -->
+             <center><h6 style="color:#00ca4e;border-radius:4px;" > SEARCH ELEMENT IN ARRAY </h2></center>
            <pre>
+#include< iostream>
+using namespace std;
 
+int main()
+{
+    int a[100],n,i,x;
+    cout<<"\nEnter  array size : ";
+    cin>>n;
+    for(i=0;i< n;i++)
+    {
+        cout<<"\nEnter The Value : ";
+        cin>>a[i];
+    }
+    cout<<"\nEnter The Value to Search :";
+    cin>>x;
+ 
+    for(i=0;i< n;i++)
+    {
+        if(a[i]==x)
+        {
+            cout<<"Found = "<< i;
+            return 0;
+        }
+    }
+    cout<< "Found";
+    return 0;
+}
+ 
+ 
+ Output: 
+Enter  array size : 4
+
+Enter The Value : 10
+
+Enter The Value : 12
+
+Enter The Value : 14
+
+Enter The Value : 14
+
+Enter The Value to Search :12
+Found = 1
+[Program finished]
            </pre>
           </div>
         </div>
@@ -187,7 +230,74 @@ Your  3 place is 40
           </div>
           <div class="card__content">
             <!-- this section is contain section  -->
+             <center><h6 style="color:#00ca4e;border-radius:4px;" > MERGE ELEMENT IN ARRAY </h2></center>
             <pre>
+#include < iostream >
+using namespace std;
+
+class Merge
+{
+  private:
+	int a[10], m, n, b[10], c[10];
+
+  public:
+	void accept();
+	void merge();
+};
+
+void Merge::accept()
+{
+	int i;
+
+	cout << "\nEnter the number of elements of 1st array: ";
+	cin >> m;
+	cout << "\nEnter the elements of the 1st array: ";
+	for (i = 0; i < m; i++)
+		cin >> a[i];
+	cout << "\nEnter the number of elements of 2nd array: ";
+	cin >> n;
+	cout << "\nEnter the elements of the 2nd array: ";
+	for (i = 0; i < n; i++)
+		cin >> b[i];
+}
+
+void Merge::merge()
+{
+	int i, j;
+
+	for (i = 0; i < m; i++)
+		c[i] = a[i];
+	j = i;
+	for (i = 0; i < n; i++, j++)
+		c[j] = b[i];
+
+	printf("The merged Array");
+	for (i = 0; i < m + n; i++)
+		cout << c[i] << " ";
+}
+int main()
+{
+	Merge m;
+	m.accept();
+	m.merge();
+}
+
+Output: 
+Enter the number of elements of 1st array: 4
+
+Enter the elements of the 1st array: 2
+4
+8
+4
+
+Enter the number of elements of 2nd array: 4
+
+Enter the elements of the 2nd array: 2
+4
+6
+8
+The merged Array2 4 8 4 2 4 6 8
+[Program finished]
 
             </pre>
            
@@ -206,9 +316,125 @@ Your  3 place is 40
             </div>
           </div>
           <div class="card__content">
+             <center><h6 style="color:#00ca4e;border-radius:4px;" > STACK OPERATION </h2></center>
             <!-- this section is contain section  -->
           <pre>
+/* Data structure algorithem stack program stack operation push pop peak*/
+#include < iostream >
+#include< conio.h >
 
+using namespace std;
+int stack[10],top=-1;
+void push();
+void pop();
+void show();
+void exit();
+
+int main()
+{
+	int ch;
+	clrscr();
+	cout<<"1.PUSH(ADD  MEMBAR )\n";
+	cout<<"2.POP(DELETE MEMBAR)\n";
+	cout<<"3.SHOW (SHOW  LIST )\n";
+	cout<<"4.Exit";
+	while (1)
+	{
+	    cout<<"\nEnter your chioic : \n";
+	    cin>>ch;
+	    switch(ch)
+	    {
+	        case 1: push();
+	        break;
+	        case 2: pop();
+	        break;
+	        case 3: show();
+	        break;
+	        case 4: exit();
+	        break;
+	        default:printf("invalid chocic option");
+	    }
+	}	return 0;
+}
+void push()
+{
+    int item;
+    if (top==5-1)
+    {
+        cout<<"stack is full";
+    }
+    else 
+    {
+        cout<<"push (add) the element :";
+        cin>>item;
+        top=top+1;
+        stack[top]=item;
+    }
+}
+void pop()
+{
+    if(top==-1)
+    {
+        cout<<"stack is empty";
+    }
+    else 
+    {
+        cout<<"pop is "<< stack[top];
+        top=top-1;
+    }
+}
+void show()
+{
+    int i ;
+    if(top>=0)
+    {
+        cout<<"Your store element:-\n";
+        for (i=top;i>=0;i--)
+        {
+            cout<<"=>"<< stack[i]<< endl;
+        }
+    }
+    else 
+    {
+        cout<<"stack is empty";
+    }
+}
+void exit()
+{
+    cout<<"ok  exit the program";
+    
+}
+
+
+OUTPUT: 
+
+1.PUSH(ADD  MEMBAR )
+2.POP(DELETE MEMBAR)
+3.SHOW (SHOW  LIST )
+4.Exit
+Enter your chioic :
+1
+push (add) the element :20
+
+Enter your chioic :
+1
+push (add) the element :40
+
+Enter your chioic :
+1
+push (add) the element :30
+
+Enter your chioic :
+3
+Your store element:-
+=>30
+=>40
+=>20
+
+Enter your chioic :
+2
+pop is 30
+Enter your chioic :
           </pre>
           </div>
         </div>
@@ -225,8 +451,78 @@ Your  3 place is 40
             </div>
           </div>
           <div class="card__content">
+             <center><h6 style="color:#00ca4e;border-radius:4px;" > PROGRAM TO EVULATE ON POSTFIX EXPRESSION USING STACK </h2></center>
             <!-- this section is contain section  -->
-            
+            <pre>
+#include < iostream >
+using namespace std;
+
+
+int prec(char c)
+{ if (c == '^')
+return 3;
+else if (c == '/' || c == '*')
+return 2;
+else if (c == '+' || c == '-')
+return 1;
+else
+return -1; }
+
+
+void infixToPostfix(string s)
+{ stack< char> st;
+string result;
+for (int i = 0; i < s.length(); i++)
+{
+char c = s[i];
+if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))
+result += c;
+else if (c == '(')
+st.push('(');
+else if (c == ')')
+{
+while (st.top() != '(')
+{
+result += st.top();
+st.pop();
+}
+st.pop();
+}
+else
+{
+while (!st.empty() && prec(s[i]) <= prec(st.top()))
+{
+if (c == '^' && st.top() != '^')
+break;
+else
+{
+result += st.top();
+st.pop();
+}
+}
+st.push(c);
+}
+}
+while (!st.empty())
+{
+result += st.top();
+st.pop();
+}
+cout << result << endl;
+}
+int main()
+{
+string exp = "a+b*(c^d-e)^(f+g*h)-i";
+infixToPostfix(exp);
+return 0;
+}
+
+
+Output:
+abcd^e-fgh*+^*+i
+
+
+            </pre>
           </div>
         </div>
         <div class="card">
@@ -242,8 +538,103 @@ Your  3 place is 40
             </div>
           </div>
           <div class="card__content">
+             <center><h6 style="color:#00ca4e;border-radius:4px;" >PROGRAM TO EVULATE ON PREFIX  EXPRESSION USING STACK</h2></center>
             <!-- this section is contain section  -->
-           
+           <pre>
+#include < iostream >
+using namespace std;
+
+bool isOperator(char c)
+
+{
+return (!isalpha(c) && !isdigit(c));
+}
+int getPriority(char C)
+{
+if (C == '-' || C == '+')
+return 1;
+else if (C == '*' || C == '/')
+return 2;
+else if (C == '^')
+return 3;
+return 0; }
+string infixToPostfix(string infix)
+{ 
+infix = '(' + infix + ')';
+int l = infix.size();
+
+stack< char > char_stack;
+string output;
+
+for (int i = 0; i < l; i++)
+{ 
+
+if (isalpha(infix[i]) || isdigit(infix[i]))
+output += infix[i];
+else if (infix[i] == '(')
+char_stack.push('(');
+else if (infix[i] == ')')
+{ 
+while (char_stack.top() != '(')
+{
+
+output += char_stack.top();
+char_stack.pop(); }
+char_stack.pop(); }
+else
+{ 
+
+if (isOperator(char_stack.top()))
+{ 
+
+if (infix[i] == '^')
+{ 
+while (getPriority(infix[i]) <= getPriority(char_stack.top()))      
+   { output += char_stack.top();
+char_stack.pop(); } }
+else
+{ 
+
+while (getPriority(infix[i]) < getPriority(char_stack.top()))
+{ 
+output += char_stack.top();
+char_stack.pop(); } }
+char_stack.push(infix[i]); } } }
+while (!char_stack.empty())
+{
+output += char_stack.top();
+char_stack.pop(); }
+return output; }
+string infixToPrefix(string infix)
+{ 
+int l = infix.size();
+reverse(infix.begin(), infix.end());
+for (int i = 0; i < l; i++)
+{ 
+if (infix[i] == '(')
+{ 
+infix[i] = ')'; 
+}
+else if (infix[i] == ')')
+{ 
+infix[i] = '('; } }
+string prefix = infixToPostfix(infix);
+reverse(prefix.begin(), prefix.end());
+return prefix; 
+}
+int main()
+{ 
+string s = ("x+y*z/w+u");
+cout << infixToPrefix(s) << std::endl;
+
+return 0;}
+
+
+
+OUTPUT :
+++x/*yzwu          
+             
+           </pre>
           </div>
         </div>
         <div class="card">
@@ -259,8 +650,56 @@ Your  3 place is 40
             </div>
           </div>
           <div class="card__content">
+             <center><h6 style="color:#00ca4e;border-radius:4px;" > REVERSE STRING USING STACK  </h2></center>
             <!-- this section is contain section  -->
-           
+           <pre>
+#include < iostram >
+using namespace std; 
+
+class Stack
+{
+    public:
+    int top;
+    unsigned capacity;
+    char *array; };
+    Stack *createStack(unsigned capacity)
+{
+    Stack *stack = new Stack();
+    stack->capacity = capacity;
+    stack->top = -1;
+    stack->array = new char[(stack->capacity * sizeof(char))];
+    int isFull(Stack *stack)
+    int isEmpty(Stack *stack) { return stack->top == -1; }
+    void push(Stack *stack, char item)
+{ 
+  if  (isFull(stack))
+  stack->array[++stack->top] = item; }
+  char pop(Stack *stack)
+{ 
+  if (isEmpty(stack)
+return stack->array[stack->top--]; }
+void reverse(char str[])
+{ 
+
+int n = strlen(str);
+
+Stack *stack = createStack(n);
+for (i = 0; i < n; i++)
+push(stack, str[i]);
+
+for (i = 0; i < n; i++)
+str[i] = pop(stack); }
+{ char str[] = "Hello";
+reverse(str);
+
+cout << "Reversed string is " << str;
+return 0; 
+}
+
+
+Output:
+Reversed string is olleh
+           </pre>
           </div>
         </div>
         <div class="card">
@@ -276,8 +715,59 @@ Your  3 place is 40
             </div>
           </div>
           <div class="card__content">
+             <center><h6 style="color:#00ca4e;border-radius:4px;" > PROGRAM TO CONVERT INFIX EXP AND EVULATE THE POSTFIX EXP </h2></center>
+            <pre>
             <!-- this section is contain section  -->
-           
+ #include < iostream >
+using namespace std;
+int main()
+{
+int a = 10, b = 5;
+cout << "Following are the Arithmetic operators in C++" << endl;
+cout << "The value of a + b is " << a + b << endl;
+cout << "The value of a - b is " << a - b << endl;
+cout << "The value of a * b is " << a * b << endl;
+cout << "The value of a / b is " << a / b << endl;
+cout << "The value of a % b is " << a % b << endl;
+cout << "The value of a++ is " << a++ << endl;
+cout << "The value of a-- is " << a-- << endl;
+cout << "The value of ++a is " << ++a << endl;
+cout << "The value of --a is " << --a << endl;
+cout << "Following are the comparison operators in C++" << endl;
+cout << "The value of a == b is " << (a == b) << endl;
+cout << "The value of a != b is " << (a != b) << endl;
+cout << "The value of a >= b is " << (a >= b) << endl;
+cout << "The value of a <= b is " << (a <= b) << endl;
+cout << "The value of a > b is " << (a > b) << endl;
+cout << "The value of a < b is " << (a < b) << endl;
+cout << "Following are the logical operators in C++" << endl;
+cout << "The value of this logical and operator ((a==b) && (a< b)) is:" << ((a == b) && (a < b)) << 
+endl;
+cout << "The value of this logical or operator ((a==b) || (a< b)) is:" << ((a == b) || (a < b)) << endl;
+cout << "The value of this logical not operator (!(a==b)) is:" << (!(a == b)) << endl;
+return 0;
+}
+
+OUTPUT : 
+
+Following are the Arithmetic operators in C++
+The value of a + b is 15
+The value of a - b is 5
+The value of a * b is 50
+The value of a / b is 2
+The value of a % b is 0
+The value of a++ is 10
+The value of a-- is 11
+The value of ++a is 11
+The value of --a is 10
+Following are the comparison operators in C++
+The value of a == b is 0
+The value of a != b is 1
+The value of a >= b is 1
+The value of a <= b is 0
+The value of a > b is 1
+The value of a < b is
+  </pre>
           </div>
         </div>
         <div class="card">
@@ -293,79 +783,9 @@ Your  3 place is 40
             </div>
           </div>
           <div class="card__content">
+             <center><h6 style="color:#00ca4e;border-radius:4px;" > PAGE  </h2></center>
             <!-- this section is contain section  -->
-           
-          </div>
-        </div>
-        <div class="card">
-          <div class="tools">
-            <div class="circle">
-              <span class="red box"></span>
-            </div>
-            <div class="circle">
-              <span class="yellow box"></span>
-            </div>
-            <div class="circle">
-              <span class="green box"></span>
-            </div>
-          </div>
-          <div class="card__content">
-            <!-- this section is contain section  -->
-            
-          </div>
-        </div>
-        <div class="card">
-          <div class="tools">
-            <div class="circle">
-              <span class="red box"></span>
-            </div>
-            <div class="circle">
-              <span class="yellow box"></span>
-            </div>
-            <div class="circle">
-              <span class="green box"></span>
-            </div>
-          </div>
-          <div class="card__content">
-            <!-- this section is contain section  -->
-           
-          </div>
-        </div>
-        <div class="card">
-          <div class="tools">
-            <div class="circle">
-              <span class="red box"></span>
-            </div>
-            <div class="circle">
-              <span class="yellow box"></span>
-            </div>
-            <div class="circle">
-              <span class="green box"></span>
-            </div>
-          </div>
-          <div class="card__content">
-            <!-- this section is contain section  -->
-            
-          </div>
-        </div>
-        <div class="card">
-          <div class="tools">
-            <div class="circle">
-              <span class="red box"></span>
-            </div>
-            <div class="circle">
-              <span class="yellow box"></span>
-            </div>
-            <div class="circle">
-              <span class="green box"></span>
-            </div>
-          </div>
-          <div class="card__content">
-            <!-- this section is contain section  -->
-            
-          </div>
-        </div>
-      </div>
+   
       <a href="page1.html" class="previous">&laquo; Previous</a>
       <a href="page3.html" class="next">Next &raquo;</a>
       
