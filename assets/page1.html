@@ -183,8 +183,94 @@ OUTPUT:
 Quotient = 2
 Remainder = 3
 
-	
-	 
+<center><h6 style="color:#00ca4e;border-radius:4px;" >TEMPERATURE  PROGRAM</h2></center> 
+
+#include < iostream >
+
+using namespace std;
+
+int main()
+{
+float fahrenheit, celsius;
+cout << "Enter the temperature in Celsius : ";
+cin >> celsius;
+fahrenheit = (celsius * 9.0) / 5.0 + 32;
+cout << "The temperature in Celsius : " << celsius << endl;
+cout << "The temperature in Fahrenheit : " << fahrenheit << endl;
+return 0;
+}
+Output
+Enter the temperature in Celsius : -40
+The temperature in Celsius : -40
+The temperature in Fahrenheit : -40
+
+
+
+<center><h6 style="color:#00ca4e;border-radius:4px;" > VOWEL AND CONSONANT  PROGRAM</h2></center>
+#include < iostream >
+using namespace std;
+int main()
+{ char ch;
+cout << "Enter any Alpabet\n";
+cin >> ch;
+switch (ch)
+{ case 'a': cout << ch << " is a vowel";
+break;
+case 'e': cout << ch << " is a vowel";
+break;
+case 'i': cout << ch << " is a vowel";
+break;
+case 'o': cout << ch << " is a vowel";
+break;
+case 'u': cout << ch << " is a vowel";
+break;
+case 'A': cout << ch << " is a vowel";
+break;
+case 'E': cout << ch << " is a vowel";
+break;
+case 'I': cout << ch << " is a vowel";
+break;
+case 'O': cout << ch << " is a vowel";
+break;
+case 'U': cout << ch << " is a vowel";
+break;
+default: cout << ch << " is a consonant";
+break; }
+return 0; }
+Output
+Enter any Alphabet: u
+u is a vowel
+
+
+
+
+<center><h6 style="color:#00ca4e;border-radius:4px;" > FIBONICCE  PROGRAM</h2></center>
+
+
+
+#include < iostream >
+
+using namespace std;
+
+int main()
+{
+int n1 = 0, n2 = 1, n3, i, number;
+cout << "Enter the number of elements: ";
+cin >> number;
+cout << n1 << " " << n2 << " ";
+for (i = 2; i < number; ++i)
+{
+n3 = n1 + n2;
+cout << n3 << " ";
+n1 = n2;
+n2 = n3;
+}
+return 0;
+}
+Output
+Enter the number of elements : 10
+0 1 1 2 3 5 8 13 21 34
+ 
              
      </pre>
       </div>
